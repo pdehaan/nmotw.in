@@ -4,13 +4,101 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-07-24T20:01:19+05:30</updated>
+  <updated>2014-07-31T17:23:45+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[address]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/address/"/>
+    <updated>2014-07-31T16:58:37+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/address</id>
+    <content type="html"><![CDATA[<p>How many times have you checked for the IP, MAC and DNS servers on the CLI?</p>
+
+<p>Well, you would have lost the count if you are into sever admin and maintaince, but either way it might be just to share some data over the LAN you would have checked for these, but when you need them programatically there a sweet module named <code>address</code> that will help you it&#8217;s sweeter APIs.</p>
+
+<p><img src="http://hemanth.github.io/nmotw.in/images/address/address.png" alt="" /></p>
+
+<p>Installing it: <code>npm install address</code></p>
+
+<p><strong>Peep in:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">address</span><span class="p">.</span><span class="nx">MAC_RE</span>
+</span><span class='line'><span class="o">/</span><span class="p">(</span><span class="o">?:</span><span class="nx">ether</span><span class="o">|</span><span class="nx">HWaddr</span><span class="p">)</span><span class="err">\</span><span class="nx">s</span><span class="o">+</span><span class="p">((</span><span class="o">?:</span><span class="p">[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z0</span><span class="o">-</span><span class="mi">9</span><span class="p">]{</span><span class="mi">2</span><span class="p">}</span><span class="err">\</span><span class="o">:</span><span class="p">){</span><span class="mi">5</span><span class="p">}[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z0</span><span class="o">-</span><span class="mi">9</span><span class="p">]{</span><span class="mi">2</span><span class="p">})</span><span class="o">/</span><span class="nx">i</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&gt;</span> <span class="nx">address</span><span class="p">.</span><span class="nx">MAC_IP_RE</span>
+</span><span class='line'><span class="o">/</span><span class="nx">inet</span><span class="err">\</span><span class="nx">s</span><span class="p">(</span><span class="o">?:</span><span class="nx">addr</span><span class="err">\</span><span class="o">:</span><span class="p">)</span><span class="o">?</span><span class="p">(</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="err">\</span><span class="p">.</span><span class="err">\</span><span class="nx">d</span><span class="o">+</span><span class="p">)</span><span class="o">/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Example usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;address&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// default interface &#39;eth&#39; on linux, &#39;en&#39; on osx.</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ip</span><span class="p">();</span>   <span class="c1">// &#39;192.168.0.2&#39;</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ipv6</span><span class="p">();</span> <span class="c1">// &#39;fe80::7aca:39ff:feb0:e67d&#39;</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">mac</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addr</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addr</span><span class="p">);</span> <span class="c1">// &#39;78:ca:39:b0:e6:7d&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// local loopback</span>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">ip</span><span class="p">(</span><span class="s1">&#39;lo&#39;</span><span class="p">);</span> <span class="c1">// &#39;127.0.0.1&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">address</span><span class="p">.</span><span class="nx">dns</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addrs</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// [&#39;10.13.2.1&#39;, &#39;10.13.2.6&#39;]</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Get them all!</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">address</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">addrs</span><span class="p">.</span><span class="nx">ip</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">.</span><span class="nx">ipv6</span><span class="p">,</span> <span class="nx">addrs</span><span class="p">.</span><span class="nx">mac</span><span class="p">);</span>
+</span><span class='line'>  <span class="c1">// &#39;192.168.0.2&#39;, &#39;fe80::7aca:39ff:feb0:e67d&#39;, &#39;78:ca:39:b0:e6:7d&#39;</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>GIF FTW?!</strong></p>
+
+<p><img src="http://hemanth.github.io/nmotw.in/images/address/address.gif" alt="address" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[nom]]></title>
@@ -2151,67 +2239,6 @@
 <p><strong>GIF FTW!</strong></p>
 
 <p><img src="http://nmotw.in/images/configstore/configstore.gif" alt="configstore" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Chalk]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/chalk/"/>
-    <updated>2014-03-13T18:33:53+05:30</updated>
-    <id>http://hemanth.github.io/nmotw.in/chalk</id>
-    <content type="html"><![CDATA[<p>There are many wonderful node modules that adhere to Unix philosophy:</p>
-
-<blockquote><p>&#8220;Write programs that do one thing and do it well.&#8221;</p></blockquote>
-
-<p>Out of many such one such elegant module is <a href="https://www.npmjs.org/package/chalk">chalk</a> thanks to <a href="http://sindresorhus.com/hi/">Sindre Sorhus</a> for that.</p>
-
-<p>Whenever one wants to color the terminal, as in styling the strings on the console the first module that would come to mind is <a href="https://github.com/Marak/colors.js">colors.js</a> but one of the major drawbacks with that being it extending <code>String.portotye</code> or be <a href="https://github.com/yeoman/yo/issues/68">these</a> problems.</p>
-
-<p>Installing chalk is like any other module: <code>npm install --save chalk</code></p>
-
-<p>Apart from allow the normal styling syntax, it also provides multiple styles, nested styles and multiple arguments.</p>
-
-<p><strong>For example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>  <span class="nx">chalk</span><span class="p">.</span><span class="nx">blue</span><span class="p">.</span><span class="nx">bgRed</span><span class="p">.</span><span class="nx">bold</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>  <span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>  <span class="nx">chalk</span><span class="p">.</span><span class="nx">red</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="nx">chalk</span><span class="p">.</span><span class="nx">underline</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>  <span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here is a simple snippet for printing all of the styles it provides:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">chalk</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chalk&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">chalk</span><span class="p">.</span><span class="nx">styles</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">style</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span><span class="p">(</span> <span class="nx">style</span> <span class="o">!==</span> <span class="s2">&quot;reset&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">chalk</span><span class="p">[</span><span class="nx">style</span><span class="p">](</span><span class="nx">style</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>gif FTW!?</strong></p>
-
-<p><img src="http://nmotw.in/images/chalk/chalk.gif" alt="chalk" /></p>
-
-<p>Until next week, happy coloring!</p>
-
-<p><img src="http://nmotw.in/images/chalk/chalk.png" alt="chalk-colors" /></p>
 ]]></content>
   </entry>
   
