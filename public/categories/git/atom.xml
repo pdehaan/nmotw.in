@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: cli, | NMOTW]]></title>
-  <link href="http://hemanth.github.io/nmotw.in/public/categories/cli/atom.xml" rel="self"/>
+  <title><![CDATA[Category: git, | NMOTW]]></title>
+  <link href="http://hemanth.github.io/nmotw.in/public/categories/git/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
   <updated>2014-08-14T18:48:19+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
