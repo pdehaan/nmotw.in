@@ -4,7 +4,7 @@
   <title><![CDATA[Category: util | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/util/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-14T18:52:06+05:30</updated>
+  <updated>2014-08-21T06:47:30+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,86 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[only]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/only/"/>
+    <updated>2014-08-21T06:24:47+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/only</id>
+    <content type="html"><![CDATA[<h2>Only</h2>
+
+<blockquote><p>Return whitelisted properties of an object.</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/only">Only</a> will only return the properties of an object that we are intrested in.</p>
+
+<p>A simple and an effective module from <a href="http://tjholowaychuk.com/">Tj Holowaychuk </a>.</p>
+
+<p><strong>Install it:</strong> <code>npm install only</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<p>Say we have a response from a mongo query which looks like:</p>
+
+<p>```javascript
+var obj = {</p>
+
+<pre><code>name: 'tobi',
+last: 'holowaychuk',
+email: 'tobi@learnboost.com',
+_id: '12345'
+</code></pre>
+
+<p>};
+```</p>
+
+<p>Out of which we are intrested on only <code>name</code> and <code>email</code>, so all we need to do is:</p>
+
+<p>```javascript</p>
+
+<p>let only = require('only');</p>
+
+<p>var obj = {</p>
+
+<pre><code>name: 'tobi',
+last: 'holowaychuk',
+email: 'tobi@learnboost.com',
+_id: '12345'
+</code></pre>
+
+<p>};</p>
+
+<p>console.log(only(obj,'name email'));</p>
+
+<p>// ^ Would log { name: 'tobi', email: 'tobi@learnboost.com' }</p>
+
+<p>console.log(only(obj,'name foo bar baz'));</p>
+
+<p>// Smart enough to omit undefineds and logs { name: 'tobi' }</p>
+
+<p>```</p>
+
+<p>The cool part being, the entire module is just ten lines and it reads:</p>
+
+<p>```javascript
+module.exports = function(obj, keys){</p>
+
+<pre><code>obj = obj || {};
+if ('string' == typeof keys) keys = keys.split(/ +/);
+return keys.reduce(function(ret, key){
+    if (null == obj[key]) return ret;
+    ret[key] = obj[key];
+    return ret;
+}, {});
+</code></pre>
+
+<p>};
+```</p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/only/only.gif" alt="only" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ms]]></title>
