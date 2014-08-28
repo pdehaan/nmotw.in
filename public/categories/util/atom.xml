@@ -4,7 +4,7 @@
   <title><![CDATA[Category: util | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/util/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-21T06:55:23+05:30</updated>
+  <updated>2014-08-28T22:30:58+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[verbal-expressions]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/verbal-expressions/"/>
+    <updated>2014-08-28T22:14:18+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/verbal-expressions</id>
+    <content type="html"><![CDATA[<h1>VerbalExpressions</h1>
+
+<blockquote><p>JavaScript Regular Expressions made easy</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/verbal-expressions">VerbalExpressions</a> is a JavaScript library that helps to construct difficult regular expressions is an intutive manner.</p>
+
+<p><strong>Install it:</strong> <code>npm install verbal-expressions</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<p>```js
+var ve = require('verbal-expressions');
+var url = "http://nmotw.in";
+var vre = ve()</p>
+
+<pre><code>                .startOfLine()
+                .then( 'http' )
+                .maybe( 's' )
+                .then( '://' )
+                .maybe( 'www.')
+                .anythingBut( " " )
+                .endOfLine();
+</code></pre>
+
+<p>vre.test(url); //true</p>
+
+<p>vre.toRegExp(); // /<sup>(?:http)(?:s)?(?:\:\/\/)(?:www.)?(?:[<sup>\</sup></sup> ]*)$/gm
+```</p>
+
+<p><strong>What else do we have?</strong></p>
+
+<p>Modifiers:</p>
+
+<ul>
+<li><p>anything()</p></li>
+<li><p>anythingBut( value )</p></li>
+<li><p>endOfLine()</p></li>
+<li><p>find( value )</p></li>
+<li><p>maybe( value )</p></li>
+<li><p>startOfLine()</p></li>
+<li><p>then( value )</p></li>
+</ul>
+
+
+<p>Special characters and groups:</p>
+
+<ul>
+<li><p>any( value )</p></li>
+<li><p>anyOf( value )</p></li>
+<li><p>br()</p></li>
+<li><p>lineBreak()</p></li>
+<li><p>range( from, to)</p></li>
+<li><p>tab()</p></li>
+<li><p>word()</p></li>
+</ul>
+
+
+<p>Modifiers:</p>
+
+<ul>
+<li><p>withAnyCase()</p></li>
+<li><p>stopAtFirst()</p></li>
+<li><p>searchOneLine()</p></li>
+</ul>
+
+
+<p>Functions:</p>
+
+<ul>
+<li>replace( source, value )</li>
+</ul>
+
+
+<p>Others:</p>
+
+<ul>
+<li><p>add( expression )</p></li>
+<li><p>multiple( value )</p></li>
+<li><p>or()</p></li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="/images/verbal-expression/verbal-expressions.gif" alt="" /></p>
+
+<p>Thanks to <strong>Mihai Ionut Vilcu</strong> for verbal expressions!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[only]]></title>
