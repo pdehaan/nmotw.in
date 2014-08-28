@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-28T22:33:18+05:30</updated>
+  <updated>2014-08-28T22:38:12+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -44,13 +44,13 @@
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">ve</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;verbal-expressions&#39;</span><span class="p">);</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&quot;http://nmotw.in&quot;</span><span class="p">;</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">vre</span> <span class="o">=</span> <span class="nx">ve</span><span class="p">()</span>
-</span><span class='line'>                  <span class="p">.</span><span class="nx">startOfLine</span><span class="p">()</span>
-</span><span class='line'>                  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="s1">&#39;http&#39;</span> <span class="p">)</span>
-</span><span class='line'>                  <span class="p">.</span><span class="nx">maybe</span><span class="p">(</span> <span class="s1">&#39;s&#39;</span> <span class="p">)</span>
-</span><span class='line'>                  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="s1">&#39;://&#39;</span> <span class="p">)</span>
-</span><span class='line'>                  <span class="p">.</span><span class="nx">maybe</span><span class="p">(</span> <span class="s1">&#39;www.&#39;</span><span class="p">)</span>
-</span><span class='line'>                  <span class="p">.</span><span class="nx">anythingBut</span><span class="p">(</span> <span class="s2">&quot; &quot;</span> <span class="p">)</span>
-</span><span class='line'>                  <span class="p">.</span><span class="nx">endOfLine</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">startOfLine</span><span class="p">()</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="s1">&#39;http&#39;</span> <span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">maybe</span><span class="p">(</span> <span class="s1">&#39;s&#39;</span> <span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="s1">&#39;://&#39;</span> <span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">maybe</span><span class="p">(</span> <span class="s1">&#39;www.&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">anythingBut</span><span class="p">(</span> <span class="s2">&quot; &quot;</span> <span class="p">)</span>
+</span><span class='line'>  <span class="p">.</span><span class="nx">endOfLine</span><span class="p">();</span>
 </span><span class='line'>
 </span><span class='line'><span class="nx">vre</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span> <span class="c1">//true</span>
 </span><span class='line'>
@@ -113,7 +113,7 @@
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="http://hemanth.github.io/nmotw.in/images/verbal-expression/verbal-expressions.gif" alt="" /></p>
+<p><img src="http://hemanth.github.io/nmotw.in/images/verbal-expressions/verbal-expressions.gif" alt="" /></p>
 
 <p>Thanks to <strong>Mihai Ionut Vilcu</strong> for verbal expressions!</p>
 ]]></content>

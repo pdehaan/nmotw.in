@@ -4,7 +4,7 @@
   <title><![CDATA[Category: util | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/util/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-28T22:33:18+05:30</updated>
+  <updated>2014-08-28T22:38:12+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -33,13 +33,13 @@ var ve = require('verbal-expressions');
 var url = "http://nmotw.in";
 var vre = ve()</p>
 
-<pre><code>                .startOfLine()
-                .then( 'http' )
-                .maybe( 's' )
-                .then( '://' )
-                .maybe( 'www.')
-                .anythingBut( " " )
-                .endOfLine();
+<pre><code>.startOfLine()
+.then( 'http' )
+.maybe( 's' )
+.then( '://' )
+.maybe( 'www.')
+.anythingBut( " " )
+.endOfLine();
 </code></pre>
 
 <p>vre.test(url); //true</p>
@@ -102,7 +102,7 @@ var vre = ve()</p>
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><img src="/images/verbal-expression/verbal-expressions.gif" alt="" /></p>
+<p><img src="/images/verbal-expressions/verbal-expressions.gif" alt="" /></p>
 
 <p>Thanks to <strong>Mihai Ionut Vilcu</strong> for verbal expressions!</p>
 ]]></content>
