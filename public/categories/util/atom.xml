@@ -4,7 +4,7 @@
   <title><![CDATA[Category: util | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/util/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-28T22:41:24+05:30</updated>
+  <updated>2014-08-28T22:42:39+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -20,7 +20,7 @@
     <id>http://hemanth.github.io/nmotw.in/verbal-expressions</id>
     <content type="html"><![CDATA[<blockquote><p>JavaScript Regular Expressions made easy</p></blockquote>
 
-<p><a href="https://www.npmjs.org/package/verbal-expressions">VerbalExpressions</a> helps to construct difficult regular expressions is an intutive manner.</p>
+<p><a href="https://www.npmjs.org/package/verbal-expressions">VerbalExpressions</a> helps us to construct difficult regular expressions is an intuitive manner.</p>
 
 <p><strong>Install it:</strong> <code>npm install verbal-expressions</code></p>
 
