@@ -4,7 +4,7 @@
   <title><![CDATA[Category: util | NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/public/categories/util/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-28T22:30:58+05:30</updated>
+  <updated>2014-08-28T22:33:18+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -28,7 +28,7 @@
 
 <p><strong>Example usage:</strong></p>
 
-<p>```js
+<p>```javascript
 var ve = require('verbal-expressions');
 var url = "http://nmotw.in";
 var vre = ve()</p>

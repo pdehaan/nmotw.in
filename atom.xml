@@ -4,13 +4,120 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-21T06:55:23+05:30</updated>
+  <updated>2014-08-28T22:33:18+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[verbal-expressions]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/verbal-expressions/"/>
+    <updated>2014-08-28T22:14:18+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/verbal-expressions</id>
+    <content type="html"><![CDATA[<h1>VerbalExpressions</h1>
+
+<blockquote><p>JavaScript Regular Expressions made easy</p></blockquote>
+
+<p><a href="https://www.npmjs.org/package/verbal-expressions">VerbalExpressions</a> is a JavaScript library that helps to construct difficult regular expressions is an intutive manner.</p>
+
+<p><strong>Install it:</strong> <code>npm install verbal-expressions</code></p>
+
+<p><strong>Example usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">ve</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;verbal-expressions&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&quot;http://nmotw.in&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">vre</span> <span class="o">=</span> <span class="nx">ve</span><span class="p">()</span>
+</span><span class='line'>                  <span class="p">.</span><span class="nx">startOfLine</span><span class="p">()</span>
+</span><span class='line'>                  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="s1">&#39;http&#39;</span> <span class="p">)</span>
+</span><span class='line'>                  <span class="p">.</span><span class="nx">maybe</span><span class="p">(</span> <span class="s1">&#39;s&#39;</span> <span class="p">)</span>
+</span><span class='line'>                  <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="s1">&#39;://&#39;</span> <span class="p">)</span>
+</span><span class='line'>                  <span class="p">.</span><span class="nx">maybe</span><span class="p">(</span> <span class="s1">&#39;www.&#39;</span><span class="p">)</span>
+</span><span class='line'>                  <span class="p">.</span><span class="nx">anythingBut</span><span class="p">(</span> <span class="s2">&quot; &quot;</span> <span class="p">)</span>
+</span><span class='line'>                  <span class="p">.</span><span class="nx">endOfLine</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">vre</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span> <span class="c1">//true</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">vre</span><span class="p">.</span><span class="nx">toRegExp</span><span class="p">();</span> <span class="c1">// /^(?:http)(?:s)?(?:\:\/\/)(?:www\.)?(?:[^\ ]*)$/gm</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>What else do we have?</strong></p>
+
+<p>Modifiers:</p>
+
+<ul>
+<li><p>anything()</p></li>
+<li><p>anythingBut( value )</p></li>
+<li><p>endOfLine()</p></li>
+<li><p>find( value )</p></li>
+<li><p>maybe( value )</p></li>
+<li><p>startOfLine()</p></li>
+<li><p>then( value )</p></li>
+</ul>
+
+
+<p>Special characters and groups:</p>
+
+<ul>
+<li><p>any( value )</p></li>
+<li><p>anyOf( value )</p></li>
+<li><p>br()</p></li>
+<li><p>lineBreak()</p></li>
+<li><p>range( from, to)</p></li>
+<li><p>tab()</p></li>
+<li><p>word()</p></li>
+</ul>
+
+
+<p>Modifiers:</p>
+
+<ul>
+<li><p>withAnyCase()</p></li>
+<li><p>stopAtFirst()</p></li>
+<li><p>searchOneLine()</p></li>
+</ul>
+
+
+<p>Functions:</p>
+
+<ul>
+<li>replace( source, value )</li>
+</ul>
+
+
+<p>Others:</p>
+
+<ul>
+<li><p>add( expression )</p></li>
+<li><p>multiple( value )</p></li>
+<li><p>or()</p></li>
+</ul>
+
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><img src="http://hemanth.github.io/nmotw.in/images/verbal-expression/verbal-expressions.gif" alt="" /></p>
+
+<p>Thanks to <strong>Mihai Ionut Vilcu</strong> for verbal expressions!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[only]]></title>
@@ -1951,150 +2058,6 @@ the method parses the given <code>str</code> and return milliseconds ;) well it 
 <p><img src="http://hemanth.github.io/nmotw.in/images/json-mask/json-mask.gif" alt="json-mask" /></p>
 
 <p>Special thanks to the author <a href="http://yuriynemtsov.com">Yuriy Nemtsov</a> for a wonderful module!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[lie-denodify]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/lie-denodify/"/>
-    <updated>2014-04-10T17:38:55+05:30</updated>
-    <id>http://hemanth.github.io/nmotw.in/lie-denodify</id>
-    <content type="html"><![CDATA[<p>Even though <a href="http://nmotw.in/rsvp/">RSVP</a> provides a <code>denodeify</code> API, <a href="https://www.npmjs.org/package/lie-denodify">lie-denodify&#8217;s</a> main focus is to turn a node style callback into a promise based one.</p>
-
-<p><a href="https://www.npmjs.org/package/lie-denodify">lie-denofiy</a> internally uses <a href="https://github.com/calvinmetcalf/lie">lie</a> which is a basic but performanent promise implementation.</p>
-
-<p>All it does to convert an async function to a promise based one is to return a promise with the help of lie:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="kd">function</span> <span class="nx">denodify</span><span class="p">(</span><span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>        <span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">concat</span><span class="p">.</span><span class="nx">apply</span><span class="p">([],</span> <span class="nx">arguments</span><span class="p">);</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nx">promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>            <span class="nx">args</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>                <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>                    <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-</span><span class='line'>                <span class="p">}</span>
-</span><span class='line'>                <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>                    <span class="nx">resolve</span><span class="p">(</span><span class="nx">success</span><span class="p">);</span>
-</span><span class='line'>                <span class="p">}</span>
-</span><span class='line'>            <span class="p">});</span>
-</span><span class='line'>            <span class="nx">func</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
-</span><span class='line'>        <span class="p">});</span>
-</span><span class='line'>    <span class="p">};</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">denodify</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Installation:</strong> <code>npm install lie-denodify</code></p>
-
-<p><strong>Usage example:</strong></p>
-
-<p>Let&#8217;s try and covert <code>fs.stat</code> function to a promise!</p>
-
-<p>First of all let&#8217;s have a look at how <code>fs.stat</code> works before conversion.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">fstat</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">fstat</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">res</span><span class="p">){</span>
-</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">/*</span>
-</span><span class='line'><span class="cm">Would log something like:</span>
-</span><span class='line'><span class="cm">{ dev: 16777217,</span>
-</span><span class='line'><span class="cm">  mode: 17407,</span>
-</span><span class='line'><span class="cm">  nlink: 14,</span>
-</span><span class='line'><span class="cm">  uid: 0,</span>
-</span><span class='line'><span class="cm">  gid: 0,</span>
-</span><span class='line'><span class="cm">  rdev: 0,</span>
-</span><span class='line'><span class="cm">  blksize: 4096,</span>
-</span><span class='line'><span class="cm">  ino: 144575596,</span>
-</span><span class='line'><span class="cm">  size: 476,</span>
-</span><span class='line'><span class="cm">  blocks: 0,</span>
-</span><span class='line'><span class="cm">  atime: Thu Apr 10 2014 17:38:18 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">  mtime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST),</span>
-</span><span class='line'><span class="cm">  ctime: Thu Apr 10 2014 17:51:50 GMT+0530 (IST) }</span>
-</span><span class='line'><span class="cm"> </span>
-</span><span class='line'><span class="cm"> And in case of an Error it would throw an error</span>
-</span><span class='line'>
-</span><span class='line'><span class="cm">*/</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now, let&#8217;s convert it into a promise:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">lieDndfy</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;lie-denodify&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="kd">var</span> <span class="nx">statp</span> <span class="o">=</span> <span class="nx">lieDndfy</span> <span class="p">(</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">stat</span> <span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">statp</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://hemanth.github.io/nmotw.in/images/lie-denodify/lie-denodify.gif" alt="lie-denodify" /></p>
-
-<p>Thanks to <a href="http://calvinmetcalf.com/">Calvin Metcalf</a> the author of lie and lie-denofiy.</p>
-
-<p>Learn to lie this week ;)!</p>
 ]]></content>
   </entry>
   
