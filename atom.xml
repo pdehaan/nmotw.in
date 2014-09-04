@@ -4,7 +4,7 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-09-04T21:20:33+05:30</updated>
+  <updated>2014-09-04T21:21:10+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
@@ -71,7 +71,7 @@
 
 <p><strong>GIF FTW!</strong></p>
 
-<p><a href="http://hemanth.github.io/nmotw.in/images/jsonselect/jsonselect.gif">jsonselect</a></p>
+<p><img src="http://hemanth.github.io/nmotw.in/images/jsonselect/jsonselect.gif" alt="jsonselect" /></p>
 
 <p>Thanks to <a href="http://lloyd.io/">Lloyd Hilaiel</a> and wish me the very best with this module!</p>
 ]]></content>
