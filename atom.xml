@@ -4,13 +4,78 @@
   <title><![CDATA[NMOTW]]></title>
   <link href="http://hemanth.github.io/nmotw.in/atom.xml" rel="self"/>
   <link href="http://hemanth.github.io/nmotw.in/"/>
-  <updated>2014-08-28T22:45:41+05:30</updated>
+  <updated>2014-09-04T21:17:09+05:30</updated>
   <id>http://hemanth.github.io/nmotw.in/</id>
   <author>
     <name><![CDATA[Hemanth.HM]]></name>
     
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[jsonselect]]></title>
+    <link href="http://hemanth.github.io/nmotw.in/jsonselect/"/>
+    <updated>2014-09-04T18:20:10+05:30</updated>
+    <id>http://hemanth.github.io/nmotw.in/jsonselect</id>
+    <content type="html"><![CDATA[<p>JSONSelect defines a language very similar in syntax and structure to
+<a href="http://www.w3.org/TR/css3-selectors/">CSS3 Selectors</a>.</p>
+
+<p>JSONSelect expressions are patterns which can be matched against JSON documents.</p>
+
+<p>Installing it: <code>npm install jsonselect</code></p>
+
+<p><strong>Sample usage:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">select</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsonselect&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">select</span><span class="p">(</span><span class="nx">user</span><span class="p">,{</span><span class="nx">only</span><span class="o">:</span> <span class="s1">&#39;.friends&#39;</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{ friends: </span>
+</span><span class='line'><span class="cm">   [ { username: &#39;bob&#39;, password: &#39;bob pass&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;joe&#39;, password: &#39;joe pass&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;jeff&#39;, password: &#39;jeff pass&#39; } ] }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">select</span><span class="p">(</span><span class="nx">user</span><span class="p">,{</span><span class="nx">only</span><span class="o">:</span> <span class="s1">&#39;.friends&#39;</span><span class="p">,</span> <span class="nx">except</span><span class="o">:</span> <span class="s1">&#39;.password&#39;</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*</span>
+</span><span class='line'><span class="cm">{ friends: </span>
+</span><span class='line'><span class="cm">   [ { username: &#39;bob&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;joe&#39; },</span>
+</span><span class='line'><span class="cm">     { username: &#39;jeff&#39; } ] }</span>
+</span><span class='line'><span class="cm">*/</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>P.S: This module is still in the beta phase. Do checkout <a href="http://jsonselect.org/#overview">jsonselect.org</a></p>
+
+<p><strong>GIF FTW!</strong></p>
+
+<p><a href="http://hemanth.github.io/nmotw.in/images/jsonselect/jsonselect.gif">jsonselect</a></p>
+
+<p>Thanks to <a href="http://lloyd.io/">Lloyd Hilaiel</a> and wish me the very best with this module!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[verbal-expressions]]></title>
@@ -1978,84 +2043,6 @@ the method parses the given <code>str</code> and return milliseconds ;) well it 
 <p>Hope you liked this simple HTML templating engine! Go ahead and <code>.replace('', string)</code></p>
 
 <p>Thanks to the author <a href="http://jongleberry.com">Jonathan Ong</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[json-mask]]></title>
-    <link href="http://hemanth.github.io/nmotw.in/json-mask/"/>
-    <updated>2014-04-17T17:50:46+05:30</updated>
-    <id>http://hemanth.github.io/nmotw.in/json-mask</id>
-    <content type="html"><![CDATA[<p><a href="https://github.com/nemtsov/json-mask">json-mask</a> Tiny language and engine for selecting specific parts of a JS object, hiding the rest.</p>
-
-<p><img src="https://raw.github.com/nemtsov/json-mask/master/logo.png" alt="" /></p>
-
-<p>The main difference between JSONPath / JSONSelect and this engine is that JSON Mask preserves the structure of the original input object.</p>
-
-<p>It&#8217;s <a href="https://github.com/nemtsov/json-mask/blob/master/lib/compiler.js">complier</a> uses a cute grammar syntax:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'> Props ::= Prop | Prop "," Props
-</span><span class='line'>   Prop ::= Object | Array
-</span><span class='line'> Object ::= NAME | NAME "/" Object
-</span><span class='line'>  Array ::= NAME "(" Props ")"
-</span><span class='line'>   NAME ::= ? all visible characters ?</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Translating it few examples, that are loosely based on XPath syntax:</p>
-
-<ul>
-<li><code>a,b,c</code> comma-separated list will select multiple fields</li>
-<li><code>a/b/c</code> path will select a field from its parent</li>
-<li><code>a(b,c)</code> sub-selection will select many fields from a parent</li>
-<li><code>a/*/c</code> the star <code>*</code> wildcard will select all items in a field</li>
-</ul>
-
-
-<p><strong>Example:</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">jmask</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;json-mask&#39;</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="p">{</span><span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span><span class="s1">&#39;hm&#39;</span><span class="p">},</span> <span class="nx">age</span><span class="o">:</span><span class="mi">7</span><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/last&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;hm&#39;</span> <span class="p">}</span> <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&gt;</span> <span class="nx">jmask</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="s1">&#39;name/first,age&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="p">{</span> <span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;hemanth&#39;</span> <span class="p">},</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">7</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>GIF FTW!</strong></p>
-
-<p><img src="http://hemanth.github.io/nmotw.in/images/json-mask/json-mask.gif" alt="json-mask" /></p>
-
-<p>Special thanks to the author <a href="http://yuriynemtsov.com">Yuriy Nemtsov</a> for a wonderful module!</p>
 ]]></content>
   </entry>
   
